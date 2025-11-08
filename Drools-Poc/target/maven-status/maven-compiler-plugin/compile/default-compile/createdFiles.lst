@@ -1,0 +1,7 @@
+com\poc\droolspoc\domain\GenericEntity.class
+com\poc\droolspoc\domain\TransformedEntity.class
+com\poc\droolspoc\controller\DroolsController.class
+com\poc\droolspoc\config\DroolsConfig.class
+com\poc\droolspoc\DroolsPocApplication.class
+com\poc\droolspoc\service\DroolsService.class
+com\poc\droolspoc\controller\DroolsController$TransformController.class
