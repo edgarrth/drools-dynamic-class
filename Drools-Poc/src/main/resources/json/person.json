@@ -1,9 +1,0 @@
-{
-  "type": "person",
-  "body": {
-    "nombre": "Juan",
-    "apellido": "Perez",
-    "edad": "35",
-    "direccion": "Av. San Borja 123"
-  }
-}
