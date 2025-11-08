@@ -1,0 +1,22 @@
+package rules
+
+import java.util.Map;
+import com.poc.droolspoc.domain.GenericEntity;
+import com.poc.droolspoc.domain.TransformedEntity;
+
+global com.poc.droolspoc.domain.TransformedEntity transformedEntity;
+
+rule "Transform Person"
+when
+    $input : GenericEntity(type == "person")
+then
+    Map<String, Object> body = $input.getBody();
+    Map<String, Object> transformedResult = new java.util.HashMap<>();
+    transformedResult.put("NombreCliente", body.get("nombre"));
+    transformedResult.put("ApellidoCliente", body.get("apellido"));
+    transformedResult.put("EdadCliente", body.get("edad"));
+    transformedResult.put("DirecciónCasa", body.get("direccion"));
+
+    transformedEntity.setResult(transformedResult); // Cambia result a Map
+    System.out.println("Person rule executed: " + transformedResult);
+end
